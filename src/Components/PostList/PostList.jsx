@@ -4,7 +4,7 @@ import Post from "../Post/Post.jsx";
 const PostList = (props) => {
   return (
     <div>
-      <Post posts={props.postList} />
+      <Post posts={props.parentEntries} />
     </div>
   );
 };

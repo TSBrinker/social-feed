@@ -5,21 +5,26 @@ import CreatePostForm from "./Components/CreatePostForm/CreatePostForm";
 
 function App() {
   const [posts, setPosts] = useState([
-    { username: "danny", postBody: "Hello World!" },
-    { username: "tyler", postBody: "Okay" },
+    {
+      username: "Tyler",
+      postBody: "Boy, howdy, this is a tough one for me.",
+    },
+    {
+      username: "Rob Schneider",
+      postBody: "You can do it!",
+    },
   ]);
+
+  function addNewPost(post) {
+    let tempPosts = [...posts, post];
+    setPosts(tempPosts);
+  }
+
   return (
     <div className="App">
       <h1>SocialFeed</h1>
-      {/* {posts.map((post) => {
-        return (
-          <div>
-            <h5>{post.username}</h5>
-            <p>{post.postBody}</p>
-          </div>
-        );
-      })} */}
-      <PostList postList={posts} />
+      <CreatePostForm addNewPostProperty={addNewPost} />
+      <PostList parentEntries={posts} />
     </div>
   );
 }
