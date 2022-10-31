@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import Post from "./Components/Post/Post";
+import Post from "../Post/Post.jsx";
 
 const PostList = (props) => {
-  let postList = props.postList.map((post) => (
+  return (
     <div>
-      <Post />
+      <Post posts={props.postList} />
     </div>
-  ));
-
-  return <div>{postList}</div>;
+  );
 };
 
 export default PostList;

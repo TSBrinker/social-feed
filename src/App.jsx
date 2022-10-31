@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useState } from "react";
 import PostList from "./Components/PostList/PostList";
@@ -12,7 +11,14 @@ function App() {
   return (
     <div className="App">
       <h1>SocialFeed</h1>
-      <CreatePostForm />
+      {/* {posts.map((post) => {
+        return (
+          <div>
+            <h5>{post.username}</h5>
+            <p>{post.postBody}</p>
+          </div>
+        );
+      })} */}
       <PostList postList={posts} />
     </div>
   );
