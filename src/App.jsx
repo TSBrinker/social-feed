@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import PostList from "./Components/PostList/PostList";
 import CreatePostForm from "./Components/CreatePostForm/CreatePostForm";
+import NavBar from "./Components/NavBar/NavBar";
 
 function App() {
   const [posts, setPosts] = useState([
@@ -22,9 +23,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>SocialFeed</h1>
+      <NavBar />
       <CreatePostForm addNewPostProperty={addNewPost} />
-      <PostList parentEntries={posts} />
+      <PostList parentPosts={posts} />
     </div>
   );
 }

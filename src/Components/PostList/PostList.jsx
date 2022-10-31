@@ -1,12 +1,20 @@
 import React, { useState } from "react";
-import Post from "../Post/Post.jsx";
+import ReactButton from "../ReactButton/ReactButton.jsx";
 
 const PostList = (props) => {
-  return (
-    <div>
-      <Post posts={props.parentEntries} />
-    </div>
-  );
+  return props.parentPosts.map((post) => {
+    console.log();
+    return (
+      <div>
+        <h5>{post.username}</h5>
+        <p>{post.postBody}</p>
+        <div className="buttonBox">
+          <ReactButton message="Like" />
+          <ReactButton message="Dislike" />
+        </div>
+      </div>
+    );
+  });
 };
 
 export default PostList;
