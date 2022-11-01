@@ -7,12 +7,17 @@ import NavBar from "./Components/NavBar/NavBar";
 function App() {
   const [posts, setPosts] = useState([
     {
-      username: "Tyler",
-      postBody: "Boy, howdy, this was a tough one for me.",
-    },
-    {
       username: "Rob Schneider",
       postBody: "You can do it!",
+    },
+    {
+      username: "Tyler",
+      postBody: "Boy howdy, this was a tough one for me.",
+    },
+    {
+      username: "Uncle Iroh",
+      postBody:
+        "It is okay that you did not finish the styling in time. Failure is only the opportunity to try again.",
     },
   ]);
 
@@ -25,7 +30,7 @@ function App() {
     <div className="App">
       <NavBar />
       <CreatePostForm addNewPostProperty={addNewPost} />
-      <PostList parentPosts={posts} />
+      <PostList className="commentFeed" parentPosts={posts} />
     </div>
   );
 }

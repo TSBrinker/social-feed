@@ -7,8 +7,8 @@ const Post = (props) => {
   const [dislikeButtonClass, setDislikeButtonClass] = useState("inactive");
 
   return (
-    <div>
-      <h5>{props.post.username}</h5>
+    <div className="comment">
+      <h4>{props.post.username}:</h4>
       <p>{props.post.postBody}</p>
       <div className="buttonBox">
         <ReactButton

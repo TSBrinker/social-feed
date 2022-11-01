@@ -1,4 +1,9 @@
-.buttonBox{
-    display:flex;
-    justify-content: center;
+.PostList{
+    border: 4px solid gray;
+    background-color: white;
+}
+
+.commentFeed{
+    background-color: white;
+    border: 6px solid gray;
 }

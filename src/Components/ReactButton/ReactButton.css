@@ -11,9 +11,9 @@ button:hover {
 
 .active{
     color: white;
-    background-color: black;
+    background-color: #ccf;
 }
 
 .inactive{
-    background-color: lightgray;
+    background-color: white;
 }
