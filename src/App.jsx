@@ -8,7 +8,7 @@ function App() {
   const [posts, setPosts] = useState([
     {
       username: "Tyler",
-      postBody: "Boy, howdy, this is a tough one for me.",
+      postBody: "Boy, howdy, this was a tough one for me.",
     },
     {
       username: "Rob Schneider",

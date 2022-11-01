@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import "./ReactButton.css";
 
-const LikeButton = (props) => {
-  const [buttonClass, setButtonClass] = useState("inactive");
+const ReactButton = (props) => {
   function handleClick() {
-    if (buttonClass === "inactive") {
-      setButtonClass("active");
+    if (props.buttonClass === "inactive") {
+      props.setThisButtonClass("active");
+      props.setOtherButtonClass("inactive");
     } else {
-      setButtonClass("inactive");
+      props.setThisButtonClass("inactive");
     }
   }
+
   return (
     <div>
-      <button className={buttonClass} onClick={handleClick}>
+      <button className={props.buttonClass} onClick={handleClick}>
         {props.message}
       </button>
     </div>
   );
 };
 
-export default LikeButton;
+export default ReactButton;
