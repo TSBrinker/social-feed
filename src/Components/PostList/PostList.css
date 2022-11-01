@@ -1,20 +1,4 @@
 .buttonBox{
     display:flex;
-    flex-direction: row;
-    justify-content: left;
-    width: 20%;
-}
-
-div{
-    display:flex;
-    flex-direction: column;
-    padding: 40px;
-}
-
-h3{
-    padding: 1px;
-}
-
-p{
-    
+    justify-content: center;
 }

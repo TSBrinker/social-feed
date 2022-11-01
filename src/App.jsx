@@ -7,8 +7,8 @@ import NavBar from "./Components/NavBar/NavBar";
 function App() {
   const [posts, setPosts] = useState([
     {
-      username: "Tyler Brinker",
-      postBody: "Boy howdy, this has been a tough one for me.",
+      username: "Tyler",
+      postBody: "Boy, howdy, this is a tough one for me.",
     },
     {
       username: "Rob Schneider",

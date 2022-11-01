@@ -7,11 +7,22 @@ const Post = (props) => {
   //   const [buttonAClass, setButtonAClass] = useState("inactive");
   //   const [buttonBClass, setButtonBClass] = useState("inactive");
 
-  return (
-    <div>
-      <h3>{props.posts.username}</h3>
-      <p>{props.posts.postBody}</p>
-      {/* <div className="buttonBox">
+  return props.parentPosts.map((post) => {
+    console.log();
+    return (
+      <div>
+        <h5>{post.username}</h5>
+        <p>{post.postBody}</p>
+        {/* <div className="buttonBox">
+          <ReactButton message="Like" />
+          <ReactButton message="Dislike" />
+        </div> */}
+      </div>
+    );
+  });
+};
+{
+  /* <div className="buttonBox">
         <LikeButton
           buttonClass={buttonAClass}
           setThisButtonClass={setButtonAClass}
@@ -22,9 +33,12 @@ const Post = (props) => {
           setThisButtonClass={setButtonBClass}
           setOtherButtonClass={setButtonAClass}
         />
-      </div> */}
-    </div>
+      </div> */
+}
+{
+  /* </div>
   );
-};
+}; */
+}
 
 export default Post;

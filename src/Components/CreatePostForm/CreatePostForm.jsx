@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./CreatePostForm.css";
 
 const CreatePostForm = (props) => {
   const [username, setName] = useState("");
@@ -16,7 +15,7 @@ const CreatePostForm = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="comment-container">
+    <form onSubmit={handleSubmit}>
       <label>Name</label>
       <input
         type="text"
@@ -24,8 +23,8 @@ const CreatePostForm = (props) => {
         onChange={(event) => setName(event.target.value)}
       />
       <label>Comment</label>
-      <textarea
-        resize="none"
+      <input
+        type="text"
         value={postBody}
         onChange={(event) => setComment(event.target.value)}
       />
