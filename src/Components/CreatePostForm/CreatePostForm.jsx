@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./CreatePostForm.css";
 
 const CreatePostForm = (props) => {
-  const [username, setName] = useState("");
-  const [postBody, setComment] = useState("");
+  const [username, setUsername] = useState("");
+  const [postBody, setPostBody] = useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -24,7 +24,7 @@ const CreatePostForm = (props) => {
         required
         type="text"
         value={username}
-        onChange={(event) => setName(event.target.value)}
+        onChange={(event) => setUsername(event.target.value)}
       />
       <label>
         <b>Comment</b>
@@ -32,7 +32,7 @@ const CreatePostForm = (props) => {
       <textarea
         required
         value={postBody}
-        onChange={(event) => setComment(event.target.value)}
+        onChange={(event) => setPostBody(event.target.value)}
       />
       <button className="postButton" type="submit">
         Post
