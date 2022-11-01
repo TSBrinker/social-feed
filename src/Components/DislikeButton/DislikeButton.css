@@ -1,7 +1,6 @@
 button {
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     cursor: pointer;
 }
 
@@ -15,5 +14,5 @@ button:hover {
 }
 
 .inactive{
-    background-color: lightgray;
+    background-color: white;
 }
